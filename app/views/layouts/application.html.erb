@@ -19,6 +19,18 @@
 
 	  <!--icone materialize -->
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	  <style>
+	  	body {
+		    display: flex;
+		    min-height: 100vh;
+		    flex-direction: column;
+	  	}
+
+		main {
+		  flex: 1 0 auto;
+		}
+	  </style>
 	  
 
   </head>
@@ -26,8 +38,16 @@
   <body>
 
   	<%= render "layouts/header" %>
-  	
-    <%= yield %>
+
+  	<main>
+    	<%= yield %>
+	</main>
+
+    <%= render "layouts/footer" %>
+
+
+
+
   </body>
 	<script>
 		$(".button-collapse").sideNav();
